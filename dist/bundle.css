@@ -1,0 +1,348 @@
+/*!**********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/style/main.css ***!
+  \**********************************************************************/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Bebas Neue";
+  background: url(images/fone.png) no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.container {
+  padding: 0 15px;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.over {
+  width: 100%;
+  height: 600px;
+  position: absolute;
+  left: 0;
+  z-index: -100;
+}
+
+#top--over {
+  top: 0;
+  background: linear-gradient(180deg, rgba(1, 6, 13, 0.6) 0%, rgba(1, 6, 13, 0) 100%);
+}
+
+#bottom--over {
+  bottom: -135px;
+  background: linear-gradient(180deg, rgba(1, 6, 13, 0) 0%, rgba(1, 6, 13, 0.636) 100%);
+}
+
+@font-face {
+  font-family: "Bebas Neue";
+  src: url(BebasNeue-Regular.ttf);
+}
+.play__btn {
+  padding: 20px 80px;
+  background: var(--primary, #FFC83D);
+  box-shadow: 0px 0px 25px 0px rgba(255, 200, 61, 0.4);
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s linear;
+}
+.play__btn a {
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  color: #000;
+  outline: 0;
+}
+.play__btn .top--border {
+  width: 240px;
+  height: 82px;
+  border-top: 1px solid #FFC83D;
+  border-bottom: 1px solid #FFC83D;
+  transform: translateX(-50%);
+  transition: all 0.2s linear;
+  position: absolute;
+  top: -6px;
+  bottom: -6px;
+  left: 50%;
+}
+.play__btn .left--border {
+  width: 6px;
+  height: 60px;
+  border-right: 1px solid #FFC83D;
+  transition: all 0.2s linear;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -12px;
+}
+.play__btn .right--border {
+  width: 6px;
+  height: 60px;
+  border-left: 1px solid #FFC83D;
+  transition: all 0.2s linear;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -12px;
+}
+.play__btn .border01 {
+  position: absolute;
+  top: -7px;
+  left: -7px;
+  transition: all 0.2s linear;
+}
+.play__btn .border02 {
+  position: absolute;
+  top: -12.1px;
+  right: -7px;
+  transform: rotate(180deg);
+  transition: all 0.2s linear;
+}
+.play__btn:hover {
+  box-shadow: 0px 0px 30px 0px rgba(255, 200, 61, 0.6);
+}
+.play__btn:hover .top--border {
+  height: 70px;
+  top: 0;
+  bottom: 0;
+  border-color: transparent;
+}
+.play__btn:hover .right--border {
+  right: 0;
+  border-color: transparent;
+}
+.play__btn:hover .left--border {
+  left: 0;
+  border-color: transparent;
+}
+.play__btn:hover .border02 {
+  transform: scale(1.1) rotate(180deg);
+}
+.play__btn:hover .border01 {
+  transform: scale(1.1);
+}
+
+.header {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.header__container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo img {
+  width: 150px;
+  height: auto;
+}
+
+.header__nav {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__nav a {
+  text-align: center;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 95%;
+  color: #fff;
+  transition: color 0.2s linear;
+}
+.header__nav a:hover {
+  color: #FFC83D;
+}
+.header__nav .active--color {
+  color: #FFC83D;
+}
+
+.header__list {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.header__list li {
+  padding: 12px 24px;
+}
+
+.header__btns {
+  display: flex;
+  justify-content: flex-end;
+  gap: 50px;
+  max-width: 270px;
+  width: 100%;
+}
+
+.section {
+  margin-top: 90px;
+  width: 100%;
+}
+
+.pley__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.play__contant {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 440px;
+  width: 100%;
+}
+.play__contant h1 {
+  text-align: center;
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 95%;
+  color: #fff;
+}
+
+.play__nav {
+  max-width: 154px;
+  width: 100%;
+  margin-top: 15px;
+  align-self: flex-start;
+}
+
+.section__list {
+  display: flex;
+  flex-direction: column;
+}
+.section__list li {
+  padding: 12px 16px;
+  position: relative;
+  transition: all 0.2s linear;
+}
+.section__list li::after {
+  content: "";
+  width: 0px;
+  height: 1px;
+  background-color: #FFC83D;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg);
+  left: -20px;
+  transition: 0.1s ease-in-out;
+}
+.section__list li:hover {
+  transform: translateX(40px);
+}
+.section__list li:hover::after {
+  width: 30px;
+}
+.section__list li:hover a {
+  color: #FFC83D;
+}
+.section__list a {
+  text-align: center;
+  font-family: Bebas Neue;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  color: #fff;
+  transition: 0.1s linear;
+}
+
+.active--line {
+  transform: translateX(40px);
+}
+.active--line::after {
+  content: "";
+  width: 30px !important;
+  height: 1px;
+  background-color: #FFC83D;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg);
+  left: -20px;
+  transition: 0.1s ease-in-out;
+}
+.active--line a {
+  color: #FFC83D;
+}
+
+.footer__container {
+  margin-top: 150px;
+  margin-bottom: 20px;
+}
+
+.footer__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.age__logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.age__logo img {
+  width: 30px;
+  height: auto;
+}
+.age__logo h3 {
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 95%;
+  color: #FBA304;
+}
+
+.footer__link {
+  max-width: 234px;
+  width: 100%;
+  display: flex;
+  gap: 14px;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  background-color: #2A2D31;
+  transition: 0.2s linear;
+  cursor: pointer;
+}
+.icon svg path {
+  transition: 0.1s linear;
+}
+.icon:hover {
+  background-color: #FFC83D;
+}
+.icon:hover svg path {
+  fill: #01060D;
+}
+
+@media screen and (min-width: 1920px) {
+  .container {
+    max-width: 1760px;
+  }
+}/*# sourceMappingURL=main.css.map */
+
+/*# sourceMappingURL=bundle.css.map*/

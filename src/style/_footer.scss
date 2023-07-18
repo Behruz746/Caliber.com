@@ -1,0 +1,66 @@
+.footer__container {
+    margin-top: 150px;
+    margin-bottom: 20px;
+}
+
+.footer__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.age__logo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    img {
+        width: 30px;
+        height: auto;
+    }
+
+    h3 {
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 95%;
+        color: #FBA304;
+    }
+}
+
+.footer__link {
+    max-width: 234px;
+    width: 100%;
+    display: flex;
+    gap: 14px;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    background-color: #2A2D31;
+    transition: .2s linear;
+    cursor: pointer;
+
+    svg {
+        path {
+            transition: .1s linear;
+        }
+    }
+
+    &:hover {
+        background-color: #FFC83D;
+
+        svg {
+            path {
+                fill: #01060D;
+            }
+        }
+    }
+}
