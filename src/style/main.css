@@ -179,7 +179,7 @@ body {
 }
 
 .section {
-  margin-top: 85px;
+  margin-top: 80px;
   width: 100%;
 }
 
@@ -245,7 +245,7 @@ body {
 .section__list a {
   text-align: center;
   font-family: Bebas Neue;
-  font-size: 19px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 400;
   color: #fff;
