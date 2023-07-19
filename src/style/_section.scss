@@ -1,5 +1,5 @@
 .section {
-    margin-top: 90px;
+    margin-top: 85px;
     width: 100%;
 }
 
@@ -19,7 +19,7 @@
 
     h1 {
         text-align: center;
-        font-size: 100px; // 120px for big desktop
+        font-size: 85px; // 120px for big desktop
         font-style: normal;
         font-weight: 400;
         line-height: 95%;
@@ -30,7 +30,7 @@
 .play__nav {
     max-width: 154px;
     width: 100%;
-    margin-top: 15px;
+    margin-top: 10px;
     align-self: flex-start;
 }
 
@@ -71,7 +71,7 @@
     a {
         text-align: center;
         font-family: Bebas Neue;
-        font-size: 22px;
+        font-size: 19px; // 22px
         font-style: normal;
         font-weight: 400;
         color: #fff;

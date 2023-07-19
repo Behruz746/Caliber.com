@@ -11,10 +11,12 @@
 }
 
 body {
+    margin: -20px 0;
     font-family: "Bebas Neue";
     background: url('../assets/fone.png') no-repeat;
     background-size: cover;
     min-height: 100vh;
+    box-shadow: 90px -90px 500px 150px rgba(11, 11, 11, 0.831) inset;
 }
 
 .container {
@@ -33,12 +35,12 @@ body {
     z-index: -100;
 }
 
-#top--over {
-    top: 0;
-    background: linear-gradient(180deg, rgba(1, 6, 13, 0.60) 0%, rgba(1, 6, 13, 0.00) 100%);
-}
+// #top--over {
+//     top: 0;
+//     background: linear-gradient(180deg, rgba(1, 6, 13, 0.60) 0%, rgba(1, 6, 13, 0.00) 100%);
+// }
 
-#bottom--over {
-    bottom: -135px;
-    background: linear-gradient(180deg, rgba(1, 6, 13, 0.00) 0%, rgba(1, 6, 13, 0.636) 100%);
-}
+// #bottom--over {
+//     bottom: -133px;
+//     background: linear-gradient(180deg, rgba(1, 6, 13, 0.00) 0%, rgba(1, 6, 13, 0.636) 100%);
+// }

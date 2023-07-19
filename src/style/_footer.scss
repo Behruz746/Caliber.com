@@ -1,5 +1,5 @@
 .footer__container {
-    margin-top: 150px;
+    margin-top: 50px;
     margin-bottom: 20px;
 }
 
@@ -33,6 +33,7 @@
 .footer__link {
     max-width: 234px;
     width: 100%;
+    height: 60px;
     display: flex;
     gap: 14px;
 }
@@ -49,6 +50,7 @@
     cursor: pointer;
 
     svg {
+
         path {
             transition: .1s linear;
         }
