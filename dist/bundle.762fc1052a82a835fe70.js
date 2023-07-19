@@ -7,10 +7,20 @@
   \***********************/
 /***/ (() => {
 
-const getName = () => {
-  console.log("Hello and welcome to Webpack");
-};
-getName();
+const sectionList = document.querySelectorAll(".section__list li");
+const trailerAc = document.querySelector(".trailer__container--active");
+const playContent = document.querySelector(".play__contant");
+function trailerActive() {
+  playContent.classList.add("hidden-container");
+}
+sectionList.forEach((item, index) => item.addEventListener("click", () => {
+  switch (index) {
+    case 0:
+      break;
+    default:
+      break;
+  }
+}));
 
 /***/ }),
 
@@ -35,17 +45,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 module.exports = __webpack_require__.p + "images/age.png";
-
-/***/ }),
-
-/***/ "./src/assets/fone.png":
-/*!*****************************!*\
-  !*** ./src/assets/fone.png ***!
-  \*****************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-module.exports = __webpack_require__.p + "images/fone.png";
 
 /***/ }),
 
@@ -176,17 +175,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_main_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style/main.css */ "./src/style/main.css");
 /* harmony import */ var _assets_age_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/age.png */ "./src/assets/age.png");
 /* harmony import */ var _assets_logo_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/logo.png */ "./src/assets/logo.png");
-/* harmony import */ var _assets_fone_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/fone.png */ "./src/assets/fone.png");
 /* eslint-disable import/extensions */
 
 
 
 
-
-const profileImg = document.getElementById("profileImg");
-profileImg.src = _assets_fone_png__WEBPACK_IMPORTED_MODULE_4__;
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle.319d1cd254a958eb0779.js.map
+//# sourceMappingURL=bundle.762fc1052a82a835fe70.js.map

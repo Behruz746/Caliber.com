@@ -11,13 +11,11 @@
 }
 
 body {
-  display: flex;
-  justify-items: center;
-  align-items: center;
   margin: 0 0;
   font-family: "Bebas Neue";
   background: url("../assets/fone.png") no-repeat;
   background-size: cover;
+  background-position: center;
   min-height: 100vh;
   box-shadow: 90px -90px 500px 250px rgba(14, 14, 16, 0.831) inset;
 }
@@ -25,6 +23,10 @@ body {
 .main {
   width: 100%;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
 }
 
 .container {
@@ -32,6 +34,14 @@ body {
   max-width: 1400px;
   width: 100%;
   margin: 0 auto;
+}
+
+.hidden-container {
+  display: none;
+  background-color: transparent;
+  color: transparent;
+  z-index: -100;
+  opacity: 0;
 }
 
 @font-face {
@@ -178,6 +188,14 @@ body {
   width: 100%;
 }
 
+.nav__burgermenu {
+  display: none;
+}
+
+.remove__btn {
+  display: none;
+}
+
 .section {
   margin-top: 80px;
   width: 100%;
@@ -270,6 +288,13 @@ body {
   color: #FFC83D;
 }
 
+.footer {
+  width: 100%;
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+}
+
 .footer__container {
   margin-top: 50px;
 }
@@ -334,5 +359,77 @@ body {
   }
   .footer__container {
     margin-top: 150px;
+  }
+}
+@media screen and (max-width: 1040px) {
+  .header__nav {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 800px) {
+  body {
+    box-shadow: 90px -90px 500px 200px rgba(14, 14, 16, 0.831) inset;
+  }
+}
+@media screen and (max-width: 790px) {
+  .header__nav {
+    gap: 0;
+  }
+  .header__list {
+    gap: 0;
+  }
+  .header__btns {
+    max-width: 220px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 700px) {
+  body {
+    box-shadow: 90px -90px 500px 150px rgba(14, 14, 16, 0.831) inset;
+  }
+  .header__nav {
+    display: none;
+  }
+  .nav__burgermenu {
+    display: block;
+  }
+  .nav__burgermenu .btn {
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+  }
+}
+@media screen and (max-width: 600px) {
+  .header__logo img {
+    width: 117px;
+    height: auto;
+  }
+  .play__contant h1 {
+    font-size: 62px;
+  }
+  .play__nav {
+    display: none;
+  }
+}
+@media screen and (max-width: 400px) {
+  .age__logo img {
+    width: 21px;
+    height: auto;
+  }
+  .age__logo h3 {
+    font-size: 14px;
+  }
+  .footer__link {
+    width: 120px;
+    height: 24px;
+    gap: 8px;
+  }
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+  .icon svg {
+    width: 11px !important;
+    height: 11px !important;
   }
 }/*# sourceMappingURL=main.css.map */
