@@ -84,7 +84,7 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Webpack02",
+      title: "Caliber.com",
       filename: "index.html",
       template: "src/template.html",
       chunks: "index",
