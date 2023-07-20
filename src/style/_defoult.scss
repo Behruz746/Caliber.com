@@ -37,7 +37,7 @@ body {
 }
 
 .hidden-container {
-    display: none;
+    display: none !important;
     background-color: transparent;
     color: transparent;
     z-index: -100;

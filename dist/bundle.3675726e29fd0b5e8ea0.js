@@ -7,20 +7,48 @@
   \***********************/
 /***/ (() => {
 
+const {
+  body
+} = document;
 const sectionList = document.querySelectorAll(".section__list li");
 const trailerAc = document.querySelector(".trailer__container--active");
 const playContent = document.querySelector(".play__contant");
-function trailerActive() {
-  playContent.classList.add("hidden-container");
+const videoPlayerContent = document.querySelector(".videoPlayer__container");
+const pleyContainer = document.querySelector(".pley__container");
+for (let i = 0; i < sectionList.length; i++) {
+  sectionList[i].addEventListener("click", () => {
+    for (let j = 0; j < sectionList.length; j++) {
+      sectionList[j].classList.remove("active--line");
+    }
+    sectionList[i].classList.add("active--line");
+  });
 }
-sectionList.forEach((item, index) => item.addEventListener("click", () => {
-  switch (index) {
-    case 0:
-      break;
-    default:
-      break;
-  }
-}));
+sectionList.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    switch (index) {
+      case 0:
+        trailerRemove(playContent, videoPlayerContent);
+        break;
+      case 1:
+        trailerActive(playContent, videoPlayerContent);
+        break;
+      default:
+        break;
+    }
+  });
+});
+function trailerActive(content, contentPly) {
+  content.classList.add("hidden-container");
+  contentPly.classList.remove("hidden-container");
+  pleyContainer.classList.add("active--pley__container");
+  body.style.backgroundImage = "url('images/fone02.png')";
+}
+function trailerRemove(content, contentPly) {
+  content.classList.remove("hidden-container");
+  contentPly.classList.add("hidden-container");
+  pleyContainer.classList.remove("active--pley__container");
+  body.style.backgroundImage = "url('images/fone.png')";
+}
 
 /***/ }),
 
@@ -48,6 +76,17 @@ module.exports = __webpack_require__.p + "images/age.png";
 
 /***/ }),
 
+/***/ "./src/assets/fone02.png":
+/*!*******************************!*\
+  !*** ./src/assets/fone02.png ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "images/fone02.png";
+
+/***/ }),
+
 /***/ "./src/assets/logo.png":
 /*!*****************************!*\
   !*** ./src/assets/logo.png ***!
@@ -56,6 +95,17 @@ module.exports = __webpack_require__.p + "images/age.png";
 
 "use strict";
 module.exports = __webpack_require__.p + "images/logo.png";
+
+/***/ }),
+
+/***/ "./src/assets/play_icon.png":
+/*!**********************************!*\
+  !*** ./src/assets/play_icon.png ***!
+  \**********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "images/play_icon.png";
 
 /***/ })
 
@@ -175,7 +225,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_main_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style/main.css */ "./src/style/main.css");
 /* harmony import */ var _assets_age_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/age.png */ "./src/assets/age.png");
 /* harmony import */ var _assets_logo_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/logo.png */ "./src/assets/logo.png");
+/* harmony import */ var _assets_fone02_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/fone02.png */ "./src/assets/fone02.png");
+/* harmony import */ var _assets_play_icon_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/play_icon.png */ "./src/assets/play_icon.png");
 /* eslint-disable import/extensions */
+
+
 
 
 
@@ -184,4 +238,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle.762fc1052a82a835fe70.js.map
+//# sourceMappingURL=bundle.3675726e29fd0b5e8ea0.js.map
