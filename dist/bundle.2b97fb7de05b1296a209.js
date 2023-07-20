@@ -49,6 +49,16 @@ function trailerRemove(content, contentPly) {
   pleyContainer.classList.remove("active--pley__container");
   body.style.backgroundImage = "url('images/fone.png')";
 }
+const sliderColume01 = document.querySelector('.slider__colume01');
+const sliderColume02 = document.querySelector('.slider__colume02');
+const btnNext = document.querySelector('.slider__btn--next');
+const btnProd = document.querySelector('.slider__btn--prod');
+function toggleSlider() {
+  sliderColume02.classList.toggle('orderZero');
+  sliderColume01.classList.toggle('orderZero');
+}
+btnNext.addEventListener('click', toggleSlider);
+btnProd.addEventListener('click', toggleSlider);
 
 /***/ }),
 
@@ -84,6 +94,17 @@ module.exports = __webpack_require__.p + "images/age.png";
 
 "use strict";
 module.exports = __webpack_require__.p + "images/fone02.png";
+
+/***/ }),
+
+/***/ "./src/assets/fone03.png":
+/*!*******************************!*\
+  !*** ./src/assets/fone03.png ***!
+  \*******************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "images/fone03.png";
 
 /***/ }),
 
@@ -226,8 +247,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_age_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/age.png */ "./src/assets/age.png");
 /* harmony import */ var _assets_logo_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/logo.png */ "./src/assets/logo.png");
 /* harmony import */ var _assets_fone02_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/fone02.png */ "./src/assets/fone02.png");
-/* harmony import */ var _assets_play_icon_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/play_icon.png */ "./src/assets/play_icon.png");
+/* harmony import */ var _assets_fone03_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/fone03.png */ "./src/assets/fone03.png");
+/* harmony import */ var _assets_play_icon_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/play_icon.png */ "./src/assets/play_icon.png");
 /* eslint-disable import/extensions */
+
 
 
 
@@ -238,4 +261,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle.3675726e29fd0b5e8ea0.js.map
+//# sourceMappingURL=bundle.2b97fb7de05b1296a209.js.map

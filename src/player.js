@@ -45,3 +45,16 @@ function trailerRemove(content, contentPly) {
   pleyContainer.classList.remove("active--pley__container");
   body.style.backgroundImage = "url('images/fone.png')";
 }
+
+const sliderColume01 = document.querySelector('.slider__colume01');
+const sliderColume02 = document.querySelector('.slider__colume02');
+const btnNext = document.querySelector('.slider__btn--next');
+const btnProd = document.querySelector('.slider__btn--prod');
+
+function toggleSlider() {
+  sliderColume02.classList.toggle('orderZero');
+  sliderColume01.classList.toggle('orderZero');
+}
+
+btnNext.addEventListener('click', toggleSlider);
+btnProd.addEventListener('click', toggleSlider);

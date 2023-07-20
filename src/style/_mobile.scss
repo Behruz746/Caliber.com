@@ -63,6 +63,10 @@
         }
     }
 
+    .pley__container {
+        flex-direction: row;
+    }
+
     .play__contant {
         h1 {
             font-size: 62px;
