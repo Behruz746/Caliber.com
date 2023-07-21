@@ -86,7 +86,7 @@ function nextSlider() {
     sliderBox.style.transform = "translateY(-395px)";
     TF = 1;
   } else if (TF === 1) {
-    sliderBox.style.transform = "translateY(-795px)";
+    sliderBox.style.transform = "translateY(-790px)";
     TF = 2;
   } else {
     sliderBox.style.transform = "translateY(0px)";
@@ -96,10 +96,10 @@ function nextSlider() {
 }
 function prodSlider() {
   let num = nextSlider();
-  if (num == 0) {
-    sliderBox.style.transform = "translateY(-795px)";
+  if (num === 0) {
+    sliderBox.style.transform = "translateY(-790px)";
   }
-  if (num == 2) {
+  if (num === 2) {
     sliderBox.style.transform = "translateY(0px)";
     num = 0;
   }
@@ -317,4 +317,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle.a719072f7a9c86eef669.js.map
+//# sourceMappingURL=bundle.2ad0ec432a06361bad14.js.map

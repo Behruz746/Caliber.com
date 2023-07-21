@@ -9,7 +9,7 @@ function nextSlider() {
     sliderBox.style.transform = "translateY(-395px)";
     TF = 1;
   } else if (TF === 1) {
-    sliderBox.style.transform = "translateY(-795px)";
+    sliderBox.style.transform = "translateY(-790px)";
     TF = 2;
   } else {
     sliderBox.style.transform = "translateY(0px)";
@@ -22,11 +22,11 @@ function nextSlider() {
 function prodSlider() {
   let num = nextSlider();
 
-  if (num == 0) {
-    sliderBox.style.transform = "translateY(-795px)";
+  if (num === 0) {
+    sliderBox.style.transform = "translateY(-790px)";
   }
 
-  if (num == 2) {
+  if (num === 2) {
     sliderBox.style.transform = "translateY(0px)";
     num = 0;
   }
