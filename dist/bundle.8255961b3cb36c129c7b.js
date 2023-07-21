@@ -67,7 +67,9 @@ for (let i = 0; i < sectionList.length; i++) {
   \***********************/
 /***/ (() => {
 
-
+const gunAudio = document.querySelector('.audio__gun');
+gunAudio.play();
+gunAudio.loop = true;
 
 /***/ }),
 
@@ -152,6 +154,17 @@ module.exports = __webpack_require__.p + "images/fone02.png";
 
 "use strict";
 module.exports = __webpack_require__.p + "images/fone03.png";
+
+/***/ }),
+
+/***/ "./src/assets/gun.mp3":
+/*!****************************!*\
+  !*** ./src/assets/gun.mp3 ***!
+  \****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+module.exports = __webpack_require__.p + "images/gun.mp3";
 
 /***/ }),
 
@@ -302,7 +315,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_fone02_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./assets/fone02.png */ "./src/assets/fone02.png");
 /* harmony import */ var _assets_fone03_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./assets/fone03.png */ "./src/assets/fone03.png");
 /* harmony import */ var _assets_play_icon_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./assets/play_icon.png */ "./src/assets/play_icon.png");
+/* harmony import */ var _assets_gun_mp3__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./assets/gun.mp3 */ "./src/assets/gun.mp3");
 /* eslint-disable import/extensions */
+
 
 
 
@@ -317,4 +332,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle.2ad0ec432a06361bad14.js.map
+//# sourceMappingURL=bundle.8255961b3cb36c129c7b.js.map

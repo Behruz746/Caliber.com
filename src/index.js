@@ -9,3 +9,4 @@ import "./assets/logo.png";
 import "./assets/fone02.png";
 import "./assets/fone03.png";
 import "./assets/play_icon.png";
+import "./assets/gun.mp3";
