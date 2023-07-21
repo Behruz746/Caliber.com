@@ -1,28 +1,19 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/player.js":
-/*!***********************!*\
-  !*** ./src/player.js ***!
-  \***********************/
+/***/ "./src/container.js":
+/*!**************************!*\
+  !*** ./src/container.js ***!
+  \**************************/
 /***/ (() => {
 
 const {
   body
 } = document;
 const sectionList = document.querySelectorAll(".section__list li");
-const trailerAc = document.querySelector(".trailer__container--active");
 const playContent = document.querySelector(".play__contant");
 const videoPlayerContent = document.querySelector(".videoPlayer__container");
 const pleyContainer = document.querySelector(".pley__container");
-for (let i = 0; i < sectionList.length; i++) {
-  sectionList[i].addEventListener("click", () => {
-    for (let j = 0; j < sectionList.length; j++) {
-      sectionList[j].classList.remove("active--line");
-    }
-    sectionList[i].classList.add("active--line");
-  });
-}
 sectionList.forEach((item, index) => {
   item.addEventListener("click", () => {
     switch (index) {
@@ -49,16 +40,72 @@ function trailerRemove(content, contentPly) {
   pleyContainer.classList.remove("active--pley__container");
   body.style.backgroundImage = "url('images/fone.png')";
 }
-const sliderColume01 = document.querySelector('.slider__colume01');
-const sliderColume02 = document.querySelector('.slider__colume02');
-const btnNext = document.querySelector('.slider__btn--next');
-const btnProd = document.querySelector('.slider__btn--prod');
-function toggleSlider() {
-  sliderColume02.classList.toggle('orderZero');
-  sliderColume01.classList.toggle('orderZero');
+
+/***/ }),
+
+/***/ "./src/menu.js":
+/*!*********************!*\
+  !*** ./src/menu.js ***!
+  \*********************/
+/***/ (() => {
+
+const sectionList = document.querySelectorAll(".section__list li");
+for (let i = 0; i < sectionList.length; i++) {
+  sectionList[i].addEventListener("click", () => {
+    for (let j = 0; j < sectionList.length; j++) {
+      sectionList[j].classList.remove("active--line");
+    }
+    sectionList[i].classList.add("active--line");
+  });
 }
-btnNext.addEventListener('click', toggleSlider);
-btnProd.addEventListener('click', toggleSlider);
+
+/***/ }),
+
+/***/ "./src/player.js":
+/*!***********************!*\
+  !*** ./src/player.js ***!
+  \***********************/
+/***/ (() => {
+
+
+
+/***/ }),
+
+/***/ "./src/slider.js":
+/*!***********************!*\
+  !*** ./src/slider.js ***!
+  \***********************/
+/***/ (() => {
+
+const btnNext = document.querySelector(".slider__btn--next");
+const btnProd = document.querySelector(".slider__btn--prod");
+const sliderBox = document.querySelector(".slider__box");
+let TF = 0;
+function nextSlider() {
+  if (TF === 0) {
+    sliderBox.style.transform = "translateY(-395px)";
+    TF = 1;
+  } else if (TF === 1) {
+    sliderBox.style.transform = "translateY(-795px)";
+    TF = 2;
+  } else {
+    sliderBox.style.transform = "translateY(0px)";
+    TF = 0;
+  }
+  return TF;
+}
+function prodSlider() {
+  let num = nextSlider();
+  if (num == 0) {
+    sliderBox.style.transform = "translateY(-795px)";
+  }
+  if (num == 2) {
+    sliderBox.style.transform = "translateY(0px)";
+    num = 0;
+  }
+}
+btnNext.addEventListener("click", prodSlider);
+btnProd.addEventListener("click", nextSlider);
 
 /***/ }),
 
@@ -243,13 +290,22 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _player_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./player.js */ "./src/player.js");
 /* harmony import */ var _player_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_player_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _style_main_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style/main.css */ "./src/style/main.css");
-/* harmony import */ var _assets_age_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/age.png */ "./src/assets/age.png");
-/* harmony import */ var _assets_logo_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/logo.png */ "./src/assets/logo.png");
-/* harmony import */ var _assets_fone02_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/fone02.png */ "./src/assets/fone02.png");
-/* harmony import */ var _assets_fone03_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/fone03.png */ "./src/assets/fone03.png");
-/* harmony import */ var _assets_play_icon_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/play_icon.png */ "./src/assets/play_icon.png");
+/* harmony import */ var _slider_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./slider.js */ "./src/slider.js");
+/* harmony import */ var _slider_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_slider_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./menu.js */ "./src/menu.js");
+/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_menu_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _container_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./container.js */ "./src/container.js");
+/* harmony import */ var _container_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_container_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _style_main_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./style/main.css */ "./src/style/main.css");
+/* harmony import */ var _assets_age_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/age.png */ "./src/assets/age.png");
+/* harmony import */ var _assets_logo_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/logo.png */ "./src/assets/logo.png");
+/* harmony import */ var _assets_fone02_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./assets/fone02.png */ "./src/assets/fone02.png");
+/* harmony import */ var _assets_fone03_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./assets/fone03.png */ "./src/assets/fone03.png");
+/* harmony import */ var _assets_play_icon_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./assets/play_icon.png */ "./src/assets/play_icon.png");
 /* eslint-disable import/extensions */
+
+
+
 
 
 
@@ -261,4 +317,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle.2b97fb7de05b1296a209.js.map
+//# sourceMappingURL=bundle.a719072f7a9c86eef669.js.map
