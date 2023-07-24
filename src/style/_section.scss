@@ -54,11 +54,11 @@
 
 .section__list {
     display: flex;
-    // gap: 10px;
+    gap: 10px;
     flex-direction: column;
 
     li {
-        padding: 7px 24px !important;
+        padding: 7.5px 24px !important;
         position: relative;
         transition: all .2s linear;
 

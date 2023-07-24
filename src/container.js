@@ -4,24 +4,46 @@ const playContent = document.querySelector(".play__contant");
 const videoPlayerContent = document.querySelector(".videoPlayer__container");
 const pleyContainer = document.querySelector(".pley__container");
 
+const gunAudio = document.querySelector(".audio__gun");
+const gunShutAudio = document.querySelector(".audio__gunShut");
+const gunReturnAudio = document.querySelector(".audio__gunReturn");
+
+gunAudio.loop = true;
+gunAudio.volume = 0.4;
+gunAudio.play();
+
 sectionList.forEach((item, index) => {
   item.addEventListener("click", () => {
-    switch (index) {
-      case 0:
-        trailerRemove(playContent, videoPlayerContent);
-        break;
-
-      case 1:
-        trailerActive(playContent, videoPlayerContent);
-        break;
-
-      default:
-        break;
-    }
+    ActivedMenuList(item, index);
   });
 });
 
+function ActivedMenuList(item, index) {
+  switch (index) {
+    case 0:
+      trailerRemove(playContent, videoPlayerContent);
+      break;
+
+    case 1:
+      trailerActive(playContent, videoPlayerContent);
+      break;
+
+    case 2:
+      trailerActive(playContent, videoPlayerContent);
+      break;
+
+    case 3:
+      trailerActive(playContent, videoPlayerContent);
+      break;
+
+    default:
+      break;
+  }
+}
+
 function trailerActive(content, contentPly) {
+  gunShutAudio.play();
+  gunShutAudio.currentTime = 0;
   content.classList.add("hidden-container");
   contentPly.classList.remove("hidden-container");
   pleyContainer.classList.add("active--pley__container");
@@ -29,8 +51,16 @@ function trailerActive(content, contentPly) {
 }
 
 function trailerRemove(content, contentPly) {
+  gunShutAudio.play();
+  gunShutAudio.currentTime = 0;
   content.classList.remove("hidden-container");
   contentPly.classList.add("hidden-container");
   pleyContainer.classList.remove("active--pley__container");
   body.style.backgroundImage = "url('images/fone.png')";
 }
+
+sectionList.forEach(item=> {
+  item.addEventListener('mouseover', ()=> {
+    gunReturnAudio.play();
+  });
+});

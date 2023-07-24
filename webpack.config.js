@@ -46,7 +46,7 @@ module.exports = {
       },
 
       { // bu imglarni mabayd larnin kichkina qilib beradi
-        test: /\.(jpe?g|png|webp|gif|svg|mp3)$/i,
+        test: /\.(jpe?g|png|webp|gif|svg|mp3|mp4|m4a)$/i,
         use: [
           {
             loader: "image-webpack-loader",
