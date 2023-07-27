@@ -3,14 +3,8 @@ const sectionList = document.querySelectorAll(".section__list li");
 const playContent = document.querySelector(".play__contant");
 const videoPlayerContent = document.querySelector(".videoPlayer__container");
 const pleyContainer = document.querySelector(".pley__container");
-
-const gunAudio = document.querySelector(".audio__gun");
 const gunShutAudio = document.querySelector(".audio__gunShut");
 const gunReturnAudio = document.querySelector(".audio__gunReturn");
-
-gunAudio.loop = true;
-gunAudio.volume = 0.4;
-gunAudio.play();
 
 sectionList.forEach((item, index) => {
   item.addEventListener("click", () => {
@@ -59,8 +53,8 @@ function trailerRemove(content, contentPly) {
   body.style.backgroundImage = "url('images/fone.png')";
 }
 
-sectionList.forEach(item=> {
-  item.addEventListener('mouseover', ()=> {
+sectionList.forEach((item) => {
+  item.addEventListener("mouseover", () => {
     gunReturnAudio.play();
   });
 });
