@@ -126,12 +126,17 @@ function videoOut(video) {
   video.pause();
   video.currentTime = 0;
 }
+;
 const toggleElement = {
   once: false
 };
 function togglePlay() {
   const method = video.paused ? "play" : "pause";
   video[method]();
+  sliderVideo.forEach(itemV => {
+    itemV.pause();
+    itemV.volume = 0;
+  });
 }
 function updateButton() {
   const icon = this.paused ? "images/Property 1=Play.png" : "images/Play & Pause.png";
@@ -608,4 +613,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle.d3390c2e0c414c23fb6b.js.map
+//# sourceMappingURL=bundle.febd6c71920a5495f749.js.map

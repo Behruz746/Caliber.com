@@ -42,7 +42,7 @@ function videoOver(video) {
 function videoOut(video) {
   video.pause();
   video.currentTime = 0;
-}
+};
 
 const toggleElement = {
   once: false,
@@ -51,6 +51,11 @@ const toggleElement = {
 function togglePlay() {
   const method = video.paused ? "play" : "pause";
   video[method]();
+
+  sliderVideo.forEach(itemV=> {
+    itemV.pause();
+    itemV.volume = 0;
+  });
 }
 
 function updateButton() {
@@ -125,5 +130,7 @@ window.addEventListener("keydown", (e) => {
   if (e.keyCode === 32) {
     updateButton();
     togglePlay();
+  } else if(e.keyCode === 27) {
+    clearVideo();
   }
 });
