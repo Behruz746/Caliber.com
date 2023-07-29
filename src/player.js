@@ -1,9 +1,10 @@
+const main = document.querySelector('.main');
 const sliderVideo = document.querySelectorAll(".slider video");
 const player = document.querySelector(".player");
-const video = player.querySelector(".viewer");
-const progress = player.querySelector(".progress");
-const progressBar = player.querySelector(".progress__filled");
-const toggle = player.querySelector(".toggle");
+const video = document.querySelector(".viewer");
+const progress = document.querySelector(".progress");
+const progressBar = document.querySelector(".progress__filled");
+const toggle = document.querySelector(".toggle");
 const playIcon = document.querySelector(".play__icon");
 const timeDiv = document.querySelector(".video__time");
 const soundValue = document.querySelector(".sound__value");
@@ -11,38 +12,91 @@ const playBtn = document.querySelector(".play--btn path");
 const closeVideo = document.querySelector(".close__video");
 const fullScreeIcon = document.querySelector(".fullScree__icon");
 
-function activeVideo() {
+sliderVideo.forEach(video=> {
+  video.currentTime = 10;
+  video.pause();
+});
+
+function videoActive() {
   player.style.display = "block";
-  video.play();
-}
+  main.style.display = "none";
 
-function sliderPlay(slidVideo) {
-  activeVideo();
-  const videoSrc = slidVideo.getAttribute("src");
-  video.src = videoSrc;
-  video.play();
-
-  fullScreeIcon.addEventListener("click", () => {
-    slidVideo.play();
-    slidVideo.volume = 1;
-    clearVideo();
+  sliderVideo.forEach((listVideo, index)=> {
+    let src = listVideo.getAttribute('src');
+    // listVideo.pause();
+    
+    if(index === 0) {
+      video.src = src;
+      video.play();
+    }
   });
+};
+
+function listVideoAct(listVideo, index) {
+  let src = listVideo.getAttribute('src');
+  player.style.display = "block";
+  video.src = src;
+  video.play();
 }
+
+function smaolScreen() {
+  let src = video.getAttribute('src');
+  let videoTime = video.currentTime;
+  clearVideo();
+
+  sliderVideo.forEach((listVideo, index)=> {
+    if(index === 0) {
+      listVideo.src = src;
+      listVideo.currentTime = videoTime;
+      listVideo.play();
+    }
+  });
+};
+
+playBtn.addEventListener('click', videoActive);
+sliderVideo.forEach((video, index)=> video.addEventListener('click', ()=> {
+  listVideoAct(video, index);
+}));
+
+fullScreeIcon.addEventListener('click', smaolScreen);
+
+// function activeVideo() {
+//   player.style.display = "block";
+//   video.play();
+
+//   sliderVideo.forEach((listVideo) => {
+//     listVideo.pause();
+//   });
+// }
+
+// function sliderPlay(slidVideo) {
+//   activeVideo();
+//   const videoSrc = slidVideo.getAttribute("src");
+//   video.src = videoSrc;
+//   video.play();
+
+//   fullScreeIcon.addEventListener("click", () => {
+//     slidVideo.play();
+//     slidVideo.volume = 1;
+//     clearVideo();
+//   });
+// }
 
 function clearVideo() {
   player.style.display = "none";
+  main.style.display = "block";
   video.pause();
   video.currentTime = 0;
 }
 
-function videoOver(video) {
-  video.play();
-}
+// function videoOver(video) {
+//   video.play();
+// }
 
-function videoOut(video) {
-  video.pause();
-  video.currentTime = 0;
-};
+// function videoOut(video) {
+//   video.pause();
+//   video.currentTime = 0;
+// }
 
 const toggleElement = {
   once: false,
@@ -52,7 +106,7 @@ function togglePlay() {
   const method = video.paused ? "play" : "pause";
   video[method]();
 
-  sliderVideo.forEach(itemV=> {
+  sliderVideo.forEach((itemV) => {
     itemV.pause();
     itemV.volume = 0;
   });
@@ -116,21 +170,21 @@ soundValue.addEventListener("click", videoSoundValue, toggleElement);
 toggle.addEventListener("click", togglePlay, toggleElement);
 progress.addEventListener("click", scrub, toggleElement);
 closeVideo.addEventListener("click", clearVideo, toggleElement);
-playBtn.addEventListener("click", activeVideo, toggleElement);
+// playBtn.addEventListener("click", activeVideo, toggleElement);
 
-sliderVideo.forEach((video) => video.addEventListener("mouseover", () => {
-  videoOver(video);
-  video.volume = 0;
-}));
+// sliderVideo.forEach((video) => video.addEventListener("mouseover", () => {
+//   videoOver(video);
+//   video.volume = 0;
+// }));
 
-sliderVideo.forEach((video) => video.addEventListener("mouseout", () => { videoOut(video); }));
-sliderVideo.forEach((video) => video.addEventListener("click", () => { sliderPlay(video); }));
+// sliderVideo.forEach((video) => video.addEventListener("mouseout", () => { videoOut(video); }));
+// sliderVideo.forEach((video) => video.addEventListener("click", () => { sliderPlay(video); }));
 
 window.addEventListener("keydown", (e) => {
   if (e.keyCode === 32) {
     updateButton();
     togglePlay();
-  } else if(e.keyCode === 27) {
+  } else if (e.keyCode === 27) {
     clearVideo();
   }
 });
