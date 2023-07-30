@@ -1,0 +1,113 @@
+.pley__container {
+    min-height: 490px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 50px;
+}
+
+.active--pley__container {
+    flex-direction: row;
+    gap: 40px;
+
+    .play__contant {
+        justify-self: center;
+    }
+
+    .play__nav {
+        align-self: flex-end !important;
+    }
+}
+
+.play__contant {    
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 440px;
+    width: 100%;
+
+    h1 {
+        text-align: center;
+        font-size: 85px; // 120px for big desktop
+        font-style: normal;
+        font-weight: 400;
+        line-height: 95%;
+        color: #fff;
+    }
+}
+
+.play__nav {
+    max-width: 154px;
+    width: 100%;
+    margin-top: 10px;
+    align-self: flex-start;
+}
+
+.section__list {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+
+    li {
+        padding: 7.5px 24px !important;
+        position: relative;
+        transition: all .2s linear;
+
+        &::after {
+            content: "";
+            width: 0px;
+            height: 1px;
+            background-color: #FFC83D;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%) rotate(180deg);
+            left: -20px;
+            transition: .1s ease-in-out;
+        }
+
+        &:hover {
+            transform: translateX(40px);
+
+            &::after {
+                width: 30px;
+            }
+
+            a {
+                color: #FFC83D;
+            }
+        }
+    }
+
+    a {
+        text-align: center;
+        font-family: Bebas Neue;
+        font-size: 22px; // 22px
+        font-style: normal;
+        font-weight: 400;
+        color: #fff;
+        transition: .1s linear;
+    }
+}
+
+.active--line {
+    transform: translateX(40px);
+
+    &::after {
+        content: "";
+        width: 30px !important;
+        height: 1px;
+        background-color: #FFC83D;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) rotate(180deg);
+        left: -20px;
+        transition: .1s ease-in-out;
+    }
+
+    a {
+        color: #FFC83D;
+    }
+}

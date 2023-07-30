@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon">
     <title> <%= htmlWebpackPlugin.options.title %> </title>
-</head>
+</head> 
 <body>
     
     <audio class="audio__gun" src="./images/Lieutenant-CBB.mp3"></audio>
     <audio class="audio__gunShut" src="./images/gunShut.mp3"></audio>
     <audio class="audio__gunReturn" src="./images/gunReturn.mp3"></audio>
 
-    <main class="main">
+    <div class="main">
             
         <header class="header">
             <div class="container">
@@ -102,12 +102,26 @@
                             </div>
 
                             <div class="player__play--box">
-                                <div class="player__play">
-                                    <svg width="202" height="208" viewBox="0 0 202 208" fill="none" xmlns="http://www.w3.org/2000/svg"><g class="play--btn" filter="url(#filter0_dd_303_160)"><path d="M117 104L85.5 122.187L85.5 85.8135L117 104Z" fill="#FFC83D"/></g><defs><filter id="filter0_dd_303_160" x="0.5" y="0.8125" width="201.5" height="206.375" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset/><feGaussianBlur stdDeviation="22.5"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.784314 0 0 0 0 0.239216 0 0 0 1 0"/><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_303_160"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset/><feGaussianBlur stdDeviation="42.5"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.784314 0 0 0 0 0.239216 0 0 0 1 0"/><feBlend mode="normal" in2="effect1_dropShadow_303_160" result="effect2_dropShadow_303_160"/><feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_303_160" result="shape"/></filter></defs><svg>
-                                </div>
+                                <div class="skill">
+                                    <svg class="play--btn" width="202" height="208" viewBox="0 0 202 208" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_dd_303_160)"><path d="M117 104L85.5 122.187L85.5 85.8135L117 104Z" fill="#FFC83D"/></g><defs><filter id="filter0_dd_303_160" x="0.5" y="0.8125" width="201.5" height="206.375" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset/><feGaussianBlur stdDeviation="22.5"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.784314 0 0 0 0 0.239216 0 0 0 1 0"/><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_303_160"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset/><feGaussianBlur stdDeviation="42.5"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.784314 0 0 0 0 0.239216 0 0 0 1 0"/><feBlend mode="normal" in2="effect1_dropShadow_303_160" result="effect2_dropShadow_303_160"/><feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_303_160" result="shape"/></filter></defs><svg>
+                                    
+                                    <div class="outer">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="210px" height="210px">
+                                            <defs>
+                                            <linearGradient id="GradientColor">
+                                                <stop offset="0%" stop-color="#e91e63" />
+                                                <stop offset="100%" stop-color="#673ab7" />
+                                            </linearGradient>
+                                            </defs>
+                                            <circle class="borderVideo" cx="105" cy="105" r="100" stroke-linecap="round" />
+                                        </svg>
+                                    </div>
+                                </div>     
+
                                 <div class="player__time">
-                                    <h1>03:45</h1>
+                                    <h1>00:00</h1>
                                 </div>
+
                             </div>
 
                         </div>
@@ -236,7 +250,7 @@
             </div>
         </footer>
 
-    </main>
+    </div>
 
   
     <div class="player">

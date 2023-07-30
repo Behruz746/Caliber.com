@@ -354,11 +354,6 @@ body {
   display: none;
 }
 
-.section {
-  margin-top: 70px;
-  width: 100%;
-}
-
 .pley__container {
   min-height: 490px;
   height: 100%;
@@ -707,6 +702,49 @@ body {
   left: 0;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.skill {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+.skill svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+
+.outer {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 1px solid rgba(101, 91, 91, 0.599);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.outer svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.outer circle {
+  fill: none;
+  stroke: #FFC83D;
+  stroke-width: 1px;
+  stroke-dasharray: 627;
+  stroke-dashoffset: 627;
+  transition: 0.2s linear;
+}
+
+.section {
+  margin-top: 70px;
+  width: 100%;
 }
 
 .footer {

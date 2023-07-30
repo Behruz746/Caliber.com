@@ -87,7 +87,12 @@ for (let i = 0; i < sectionList.length; i++) {
   \***********************/
 /***/ (() => {
 
-const main = document.querySelector('.main');
+/* eslint-disable no-shadow */
+/* eslint-disable no-use-before-define */
+/* eslint-disable no-param-reassign */
+/* eslint-disable no-inner-declarations */
+
+const main = document.querySelector(".main");
 const sliderVideo = document.querySelectorAll(".slider video");
 const player = document.querySelector(".player");
 const video = document.querySelector(".viewer");
@@ -96,91 +101,73 @@ const progressBar = document.querySelector(".progress__filled");
 const toggle = document.querySelector(".toggle");
 const playIcon = document.querySelector(".play__icon");
 const timeDiv = document.querySelector(".video__time");
+const playerTime = document.querySelector('.player__time h1');
 const soundValue = document.querySelector(".sound__value");
-const playBtn = document.querySelector(".play--btn path");
+const playBtn = document.querySelector(".play--btn g");
 const closeVideo = document.querySelector(".close__video");
 const fullScreeIcon = document.querySelector(".fullScree__icon");
-sliderVideo.forEach(video => {
-  video.currentTime = 10;
-  video.pause();
-});
+const borderVideo = document.querySelector(".borderVideo");
+let TF = true;
 function videoActive() {
   player.style.display = "block";
   main.style.display = "none";
   sliderVideo.forEach((listVideo, index) => {
-    let src = listVideo.getAttribute('src');
-    // listVideo.pause();
-
+    const src = listVideo.getAttribute("src");
+    listVideo.pause();
     if (index === 0) {
       video.src = src;
       video.play();
     }
   });
 }
-;
-function listVideoAct(listVideo, index) {
-  let src = listVideo.getAttribute('src');
+function listVideoAct(listVideo) {
+  const src = listVideo.getAttribute("src");
   player.style.display = "block";
   video.src = src;
   video.play();
+  sliderVideo.forEach(itemV => {
+    itemV.pause();
+    itemV.volume = 1;
+  });
 }
 function smaolScreen() {
-  let src = video.getAttribute('src');
-  let videoTime = video.currentTime;
+  const src = video.getAttribute("src");
+  const videoTime = video.currentTime;
   clearVideo();
   sliderVideo.forEach((listVideo, index) => {
     if (index === 0) {
       listVideo.src = src;
       listVideo.currentTime = videoTime;
       listVideo.play();
+      function getTime() {
+        const math = listVideo.currentTime / listVideo.duration * 627;
+        borderVideo.style.strokeDashoffset = `${627 - math}`;
+      }
+      setInterval(() => {
+        const currentTime = formatTime(listVideo.currentTime);
+        const secounts = currentTime[1] < 10 ? `0${currentTime[1]}` : currentTime[1];
+        const minutes = currentTime[0] < 10 ? `0${currentTime[0]}` : currentTime[0];
+        playerTime.innerHTML = `${minutes}:${secounts}`;
+      }, 500);
+      if (!TF) {
+        listVideo.volume = 0;
+      } else if (TF) {
+        listVideo.volume = 1;
+      }
+      listVideo.addEventListener("timeupdate", getTime);
     }
   });
 }
-;
-playBtn.addEventListener('click', videoActive);
-sliderVideo.forEach((video, index) => video.addEventListener('click', () => {
+playBtn.addEventListener("click", videoActive);
+sliderVideo.forEach((video, index) => video.addEventListener("click", () => {
   listVideoAct(video, index);
 }));
-fullScreeIcon.addEventListener('click', smaolScreen);
-
-// function activeVideo() {
-//   player.style.display = "block";
-//   video.play();
-
-//   sliderVideo.forEach((listVideo) => {
-//     listVideo.pause();
-//   });
-// }
-
-// function sliderPlay(slidVideo) {
-//   activeVideo();
-//   const videoSrc = slidVideo.getAttribute("src");
-//   video.src = videoSrc;
-//   video.play();
-
-//   fullScreeIcon.addEventListener("click", () => {
-//     slidVideo.play();
-//     slidVideo.volume = 1;
-//     clearVideo();
-//   });
-// }
-
 function clearVideo() {
   player.style.display = "none";
   main.style.display = "block";
   video.pause();
   video.currentTime = 0;
 }
-
-// function videoOver(video) {
-//   video.play();
-// }
-
-// function videoOut(video) {
-//   video.pause();
-//   video.currentTime = 0;
-// }
-
 const toggleElement = {
   once: false
 };
@@ -223,7 +210,6 @@ setInterval(() => {
 
 // =====================================================================
 
-let TF = true;
 function videoSoundValue() {
   const soundIcon = document.querySelector(".sound__value img");
   if (TF) {
@@ -244,16 +230,7 @@ soundValue.addEventListener("click", videoSoundValue, toggleElement);
 toggle.addEventListener("click", togglePlay, toggleElement);
 progress.addEventListener("click", scrub, toggleElement);
 closeVideo.addEventListener("click", clearVideo, toggleElement);
-// playBtn.addEventListener("click", activeVideo, toggleElement);
-
-// sliderVideo.forEach((video) => video.addEventListener("mouseover", () => {
-//   videoOver(video);
-//   video.volume = 0;
-// }));
-
-// sliderVideo.forEach((video) => video.addEventListener("mouseout", () => { videoOut(video); }));
-// sliderVideo.forEach((video) => video.addEventListener("click", () => { sliderPlay(video); }));
-
+fullScreeIcon.addEventListener("click", smaolScreen);
 window.addEventListener("keydown", e => {
   if (e.keyCode === 32) {
     updateButton();
@@ -668,4 +645,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle.02a9ed51a0de4bfe49e3.js.map
+//# sourceMappingURL=bundle.eae2d3c9d13adba1d882.js.map
