@@ -1,3 +1,4 @@
+/* eslint-disable no-use-before-define */
 const { body } = document;
 const sectionList = document.querySelectorAll(".section__list li");
 const playContent = document.querySelector(".play__contant");

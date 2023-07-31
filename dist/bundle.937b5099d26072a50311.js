@@ -7,6 +7,7 @@
   \**************************/
 /***/ (() => {
 
+/* eslint-disable no-use-before-define */
 const {
   body
 } = document;
@@ -101,25 +102,41 @@ const progressBar = document.querySelector(".progress__filled");
 const toggle = document.querySelector(".toggle");
 const playIcon = document.querySelector(".play__icon");
 const timeDiv = document.querySelector(".video__time");
-const playerTime = document.querySelector('.player__time h1');
+const playerTime = document.querySelector(".player__time h1");
 const soundValue = document.querySelector(".sound__value");
 const playBtn = document.querySelector(".play--btn g");
+const playSvg = document.querySelector(".play--btn");
+const pauseSvg = document.querySelector(".pause--btn");
 const closeVideo = document.querySelector(".close__video");
 const fullScreeIcon = document.querySelector(".fullScree__icon");
 const borderVideo = document.querySelector(".borderVideo");
 let TF = true;
+
+// =====================================================================================
+
 function videoActive() {
   player.style.display = "block";
   main.style.display = "none";
-  sliderVideo.forEach((listVideo, index) => {
-    const src = listVideo.getAttribute("src");
-    listVideo.pause();
-    if (index === 0) {
-      video.src = src;
-      video.play();
-    }
-  });
+  const toggleBtn = true;
+  if (toggleBtn) {
+    playSvg.style.display = "none";
+    pauseSvg.style.display = "block";
+    sliderVideo.forEach((listVideo, index) => {
+      const src = listVideo.getAttribute("src");
+      listVideo.pause();
+      if (index === 0) {
+        video.src = src;
+        video.play();
+      }
+    });
+  } else if (!toggleBtn) {
+    playSvg.style.display = "block";
+    pauseSvg.style.display = "none";
+  }
 }
+
+// ===================================================================================
+
 function listVideoAct(listVideo) {
   const src = listVideo.getAttribute("src");
   player.style.display = "block";
@@ -141,7 +158,8 @@ function smaolScreen() {
       listVideo.play();
       function getTime() {
         const math = listVideo.currentTime / listVideo.duration * 627;
-        borderVideo.style.strokeDashoffset = `${627 - math}`;
+        const scrub = 627;
+        borderVideo.style.strokeDashoffset = scrub - math.toFixed();
       }
       setInterval(() => {
         const currentTime = formatTime(listVideo.currentTime);
@@ -645,4 +663,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle.eae2d3c9d13adba1d882.js.map
+//# sourceMappingURL=bundle.937b5099d26072a50311.js.map
