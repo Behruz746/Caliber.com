@@ -723,6 +723,9 @@ body {
   z-index: 5;
 }
 .skill .pause--btn {
+  display: none;
+  width: 50px;
+  height: auto;
   position: absolute;
   top: 50%;
   left: 50%;

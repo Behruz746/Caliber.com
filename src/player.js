@@ -30,29 +30,32 @@ let TF = true;
 function videoActive() {
   player.style.display = "block";
   main.style.display = "none";
+  playSvg.style.display = "none";
+  pauseSvg.style.display = "block";
 
-  const toggleBtn = true;
-
-  if (toggleBtn) {
-    playSvg.style.display = "none";
-    pauseSvg.style.display = "block";
-
-    sliderVideo.forEach((listVideo, index) => {
-      const src = listVideo.getAttribute("src");
-      listVideo.pause();
-  
-      if (index === 0) {
-        video.src = src;
-        video.play();
-      }
-    });
-
-  } else if (!toggleBtn) {
-    playSvg.style.display = "block";
-    pauseSvg.style.display = "none";
-
-  }
+  sliderVideo.forEach((listVideo, index) => {
+    const src = listVideo.getAttribute("src");
+    listVideo.pause();
+    if (index === 0) {
+      video.src = src;
+      video.play();
+    }
+  });
 }
+
+pauseSvg.addEventListener("click", () => {
+  playSvg.style.display = "block";
+  pauseSvg.style.display = "none";
+
+  sliderVideo.forEach((listVideo, index) => {
+    const src = listVideo.getAttribute("src");
+    listVideo.pause();
+    if (index === 0) {
+      video.src = src;
+      video.pause();
+    }
+  });
+});
 
 // ===================================================================================
 
@@ -61,6 +64,9 @@ function listVideoAct(listVideo) {
   player.style.display = "block";
   video.src = src;
   video.play();
+
+  playSvg.style.display = "none";
+  pauseSvg.style.display = "block";
 
   sliderVideo.forEach((itemV) => {
     itemV.pause();

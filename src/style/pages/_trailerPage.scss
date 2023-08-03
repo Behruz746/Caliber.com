@@ -280,6 +280,7 @@
     }
 
     svg {
+        // display: none;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -288,7 +289,9 @@
     }
 
     .pause--btn { 
-        // display: none;
+        display: none;
+        width: 50px;
+        height: auto;
         position: absolute;
         top: 50%;
         left: 50%;

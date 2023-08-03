@@ -57,7 +57,6 @@
             <div class="container">
 
                 <div class="pley__container">
-
                     <nav class="play__nav">
                         <ul class="section__list">
                             <li class="home__container-active active--line"><a href="#">HOME</a></li>
@@ -104,7 +103,7 @@
                             <div class="player__play--box">
                                 <div class="skill">
                                     <svg class="play--btn" width="202" height="208" viewBox="0 0 202 208" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_dd_303_160)"><path d="M117 104L85.5 122.187L85.5 85.8135L117 104Z" fill="#FFC83D"/></g><defs><filter id="filter0_dd_303_160" x="0.5" y="0.8125" width="201.5" height="206.375" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset/><feGaussianBlur stdDeviation="22.5"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.784314 0 0 0 0 0.239216 0 0 0 1 0"/><feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_303_160"/><feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset/><feGaussianBlur stdDeviation="42.5"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 0.784314 0 0 0 0 0.239216 0 0 0 1 0"/><feBlend mode="normal" in2="effect1_dropShadow_303_160" result="effect2_dropShadow_303_160"/><feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_303_160" result="shape"/></filter></defs><svg>
-                                    <svg class="pause--btn" height="25px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M224,435.8V76.1c0-6.7-5.4-12.1-12.2-12.1h-71.6c-6.8,0-12.2,5.4-12.2,12.1v359.7c0,6.7,5.4,12.2,12.2,12.2h71.6   C218.6,448,224,442.6,224,435.8z"/><path d="M371.8,64h-71.6c-6.7,0-12.2,5.4-12.2,12.1v359.7c0,6.7,5.4,12.2,12.2,12.2h71.6c6.7,0,12.2-5.4,12.2-12.2V76.1   C384,69.4,378.6,64,371.8,64z"/></g></svg>   
+                                    <img class="pause--btn" src="images/pause-icon-19-24.png" alt="| |">
 
                                     <div class="outer">
                                         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="210px" height="210px">
@@ -199,7 +198,52 @@
 
                     </div>
 
+
+
+
+                    <div class="gallery__container hidden-container">
+                        <h1 class="gallery__title">Gallery</h1>
+
+                        <div class="gallery__swiper">
+
+                            <button class="gallery__upBtn galleryBtn">
+                                <svg id="ot-back-arw" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 444.531 444.531" xml:space="preserve"><title>Back Button</title><g><path fill="currentColor" d="M213.13,222.409L351.88,83.653c7.05-7.043,10.567-15.657,10.567-25.841c0-10.183-3.518-18.793-10.567-25.835                  l-21.409-21.416C323.432,3.521,314.817,0,304.637,0s-18.791,3.521-25.841,10.561L92.649,196.425                  c-7.044,7.043-10.566,15.656-10.566,25.841s3.521,18.791,10.566,25.837l186.146,185.864c7.05,7.043,15.66,10.564,25.841,10.564                  s18.795-3.521,25.834-10.564l21.409-21.412c7.05-7.039,10.567-15.604,10.567-25.697c0-10.085-3.518-18.746-10.567-25.978                  L213.13,222.409z"></path></g></svg>
+                            </button>
+
+                            <div class="gallery__sliders">
+
+                                <div class="gallery__slider">
+                                    <img src="./images/slider-img02.png" alt="slider image">
+                                </div>
+
+                                <div class="gallery__slider">
+                                    <img src="./images/slider-img02.png" alt="slider image">
+                                </div>
+
+                                <div class="gallery__slider">
+                                    <img src="./images/slider-img02.png" alt="slider image">
+                                </div>
+
+                            </div>
+
+                            <button class="gallery__nextBtn galleryBtn">
+                                <svg id="ot-back-arw" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 444.531 444.531" xml:space="preserve"><title>Back Button</title><g><path fill="currentColor" d="M213.13,222.409L351.88,83.653c7.05-7.043,10.567-15.657,10.567-25.841c0-10.183-3.518-18.793-10.567-25.835                  l-21.409-21.416C323.432,3.521,314.817,0,304.637,0s-18.791,3.521-25.841,10.561L92.649,196.425                  c-7.044,7.043-10.566,15.656-10.566,25.841s3.521,18.791,10.566,25.837l186.146,185.864c7.05,7.043,15.66,10.564,25.841,10.564                  s18.795-3.521,25.834-10.564l21.409-21.412c7.05-7.039,10.567-15.604,10.567-25.697c0-10.085-3.518-18.746-10.567-25.978                  L213.13,222.409z"></path></g></svg>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="pick__container hidden-container">
+                        
+                    </div>
+
                 </div>
+
+
+               
 
             </div>
         </section>
@@ -288,14 +332,6 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <g opacity="0.6">
                               <path d="M16 3H22V9H20V5H16V3ZM2 3H8V5H4V9H2V3ZM20 19V15H22V21H16V19H20ZM4 19H8V21H2V15H4V19Z" fill="white"/>
-                            </g>
-                          </svg>
-                    </div>
-    
-                    <div class="setting__icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <g opacity="0.6">
-                              <path d="M6.17071 18C6.58254 16.8348 7.69378 16 9 16C10.3062 16 11.4175 16.8348 11.8293 18H22V20H11.8293C11.4175 21.1652 10.3062 22 9 22C7.69378 22 6.58254 21.1652 6.17071 20H2V18H6.17071ZM12.1707 11C12.5825 9.83481 13.6938 9 15 9C16.3062 9 17.4175 9.83481 17.8293 11H22V13H17.8293C17.4175 14.1652 16.3062 15 15 15C13.6938 15 12.5825 14.1652 12.1707 13H2V11H12.1707ZM6.17071 4C6.58254 2.83481 7.69378 2 9 2C10.3062 2 11.4175 2.83481 11.8293 4H22V6H11.8293C11.4175 7.16519 10.3062 8 9 8C7.69378 8 6.58254 7.16519 6.17071 6H2V4H6.17071ZM9 6C9.55228 6 10 5.55228 10 5C10 4.44772 9.55228 4 9 4C8.44772 4 8 4.44772 8 5C8 5.55228 8.44772 6 9 6ZM15 13C15.5523 13 16 12.5523 16 12C16 11.4477 15.5523 11 15 11C14.4477 11 14 11.4477 14 12C14 12.5523 14.4477 13 15 13ZM9 20C9.55228 20 10 19.5523 10 19C10 18.4477 9.55228 18 9 18C8.44772 18 8 18.4477 8 19C8 19.5523 8.44772 20 9 20Z" fill="white"/>
                             </g>
                           </svg>
                     </div>

@@ -4,20 +4,31 @@ import "./slider.js";
 import "./menu.js";
 import "./container.js";
 import "./style/main.css";
-import "./assets/age.png";
-import "./assets/icon.png";
-import "./assets/logo.png";
-import "./assets/fone02.png";
-import "./assets/fone03.png";
-import "./assets/play_icon.png";
-import "./assets/Lieutenant-CBB.mp3";
-import "./assets/gunShut.mp3";
-import "./assets/gunReturn.mp3";
-import "./assets/Lieutenant-CBB.m4a";
-import "./assets/Fearmonger Battle Pass _ Caliber.mp4";
-import "./assets/Caliber is available in Steam.mp4";
-import "./assets/Property 1=volume-up-line.png";
-import "./assets/Property 1=volume-mute-line.png";
-import "./assets/Play & Pause.png";
-import "./assets/Property 1=Play.png";
-import "./assets/clearIcon.png";
+
+// images
+import "./assets/images/age.png";
+import "./assets/images/icon.png";
+import "./assets/images/logo.png";
+import "./assets/images/fone02.png";
+import "./assets/images/fone03.png";
+import "./assets/images/fone04.png";
+import "./assets/images/fone05.png";
+import "./assets/images/slider-img.png";
+import "./assets/images/slider-img02.png";
+import "./assets/images/play_icon.png";
+import "./assets/images/Property 1=volume-up-line.png";
+import "./assets/images/Property 1=volume-mute-line.png";
+import "./assets/images/Play & Pause.png";
+import "./assets/images/Property 1=Play.png";
+import "./assets/images/clearIcon.png";
+import "./assets/images/pause-icon-19-24.png";
+
+// audios
+import "./assets/audio/Lieutenant-CBB.mp3";
+import "./assets/audio/gunShut.mp3";
+import "./assets/audio/gunReturn.mp3";
+
+// videos
+import "./assets/videos/Lieutenant-CBB.m4a";
+import "./assets/videos/Fearmonger Battle Pass _ Caliber.mp4";
+import "./assets/videos/Caliber is available in Steam.mp4";
