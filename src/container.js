@@ -9,7 +9,7 @@ const pleyContainer = document.querySelector(".pley__container");
 const gunShutAudio = document.querySelector(".audio__gunShut");
 const gunReturnAudio = document.querySelector(".audio__gunReturn");
 
-function ActivedMenuList(index) {
+function ActivedMenuList(index) { 
   switch (index) {
     case 0:
       trailerActive(playContent, videoPlayerContent, galleryContainer, pickContainer, "images/fone.png");
